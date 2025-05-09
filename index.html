@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Flame Learnings - Personalized Online Tuitions and Montessori Training" />
+    <meta name="author" content="Flame Learnings" />
+    <title>Flame Learnings</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="main-header">
+        <div class="container">
+            <nav class="main-nav">
+                <a class="logo" href="index.html">
+                    <img src="assets/logo.png" alt="flame-learnings-logo">
+                    <span class="logo-text">Flame Learnings</span>
+                </a>
+                
+                <!-- Mobile menu button -->
+                <button class="menu-toggle" id="navbarToggler" aria-label="Toggle menu">
+                    <span class="hamburger"></span>
+                </button>
+                
+                <!-- Navigation links -->
+                <ul class="nav-links" id="navbarMenu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="materials.html">Materials</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Header -->
+    <header class="hero">
+        <div id="particle-background">
+            <canvas id="particle-canvas"></canvas>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <br><br><h1>Light your dreams with Flame Learnings</h1>
+                    <p>Our expert teachers provide live online sessions tailored to individual learning needs, covering key subjects like Math, Science, English, and more. Whether you prefer focused one-on-one attention or the collaborative energy of small group classes, Flame Learnings offers flexible scheduling, regular assessments, and comprehensive study support—all from the comfort of your home.</p>
+                    <div class="hero-buttons">
+                        <a href="about.html" class="btn btn-primary">Read More</a>
+                        <a href="contact.html" class="btn btn-outline">Contact Us</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/model.jpg" alt="Flame Learnings Banner" />
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-container">
+                <div class="features-title">
+                    <h2>Why Choose Flame Learnings?</h2>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <h3>Personalized Classes</h3>
+                        <p>One-to-one sessions designed to meet individual learning needs and pace.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Group Tuitions</h3>
+                        <p>Interactive group sessions that encourage discussion and collaboration.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3>Montessori Training</h3>
+                        <p>Professional Montessori Teacher Training Course with expert guidance.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>Supportive Environment</h3>
+                        <p>Dedicated mentors and timely doubt-clearing sessions to keep learners on track.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+     
+          <!-- TESTIMONIALS -->
+          <section class="student-feedback-carousel">
+            <div class="carousel-container">
+                <!-- Feedback 1 -->
+                <div class="feedback active">
+                    <h3>Hana NS</h3>
+                    <p class="student-info">Class X, Int'l Indian School – Taif</p>
+                    <blockquote>"Flame Learnings helped me improve my understanding in Math and Science. The teachers explain every concept so clearly and patiently. The one-to-one attention really made a difference in my scores!"</blockquote>
+                </div>
+        
+                <!-- Feedback 2 -->
+                <div class="feedback">
+                    <h3>Wesam Saud Abdullah</h3>
+                    <p class="student-info">Class V, Novel Int'l School – Jeddah</p>
+                    <blockquote>"I love learning with Flame Learnings! The classes are fun, and my teacher helps me a lot with reading and spelling. I got better at doing my homework too!"</blockquote>
+                </div>
+        
+                <!-- Feedback 3 -->
+                <div class="feedback">
+                    <h3>Mohammed Yusuf</h3>
+                    <p class="student-info">Class XI Science, DPS Al Falah Int'l School – Jeddah</p>
+                    <blockquote>"Joining Flame Learnings was the best decision before my board exams. Their notes and worksheets are super helpful, and the online classes feel just like real school. I feel more confident now in Physics and Chemistry."</blockquote>
+                </div>
+        
+                <!-- Feedback 4 -->
+                <div class="feedback">
+                    <h3>Mohammed Anas</h3>
+                    <p class="student-info">Class IV, Int'l Indian School – Jeddah</p>
+                    <blockquote>"Flame Learnings is very good. I like the stories and games during the English class. My teacher is very kind and helps me every time I ask."</blockquote>
+                </div>
+        
+                <!-- Feedback 5 -->
+                <div class="feedback">
+                    <h3>Rayan Ahmed Rizwan</h3>
+                    <p class="student-info">Class XII Science, Al Mawarid Int'l School – Jeddah</p>
+                    <blockquote>"Flame Learnings gave me the push I needed for my NEET preparation. Their flexible class timings helped me manage school and tuition easily. Thank you for the support and motivation!"</blockquote>
+                </div>
+        
+                <!-- Feedback 6 -->
+                <div class="feedback">
+                    <h3>Ashil Razak</h3>
+                    <p class="student-info">Class XII Science, Sacred Heart English School – Kottakkal, Kerala</p>
+                    <blockquote>"Even from Kerala, I was able to attend expert classes online through Flame Learnings. The teachers are highly experienced, and their approach made learning complicated topics feel simple. I highly recommend it to science stream students."</blockquote>
+                </div>
+        
+                <!-- Feedback 7 -->
+                <div class="feedback">
+                    <h3>Rena Fathima</h3>
+                    <p class="student-info">Class X, Int'l Indian School – Taif, KSA</p>
+                    <blockquote>"Before joining Flame Learnings, I struggled with time management. Now, the organized classes and clear explanations have really helped me focus and score better. My parents are also happy with my progress."</blockquote>
+                </div>
+        
+                <!-- Feedback 8 -->
+                <div class="feedback">
+                    <h3>Ali Soudugar</h3>
+                    <p class="student-info">KLE'S International School, Belagavi, Karnataka</p>
+                    <blockquote>"Flame Learnings made online learning effective and stress-free. The sessions are interactive, and I love the quick revisions before exams. The study materials are amazing!"</blockquote>
+                </div>
+        
+                <!-- Feedback 9 -->
+                <div class="feedback">
+                    <h3>Milan Manoj Varghese</h3>
+                    <p class="student-info">Class XII Science, Al Alia Int'l School – Jeddah</p>
+                    <blockquote>"Thanks to Flame Learnings, I improved a lot in Biology and Chemistry. Their test series and feedback after each class helped me track my progress. I'm now aiming for top results!"</blockquote>
+                </div>
+        
+                <!-- Feedback 10 -->
+                <div class="feedback">
+                    <h3>Al Thouseef Abdullah</h3>
+                    <p class="student-info">Class X, Int'l Indian School – Jeddah</p>
+                    <blockquote>"What I like most about Flame Learnings is how they make tough chapters easy with real-life examples. The live classes are engaging, and I never feel bored or left out."</blockquote>
+                </div>
+        
+                <!-- Feedback 11 -->
+                <div class="feedback">
+                    <h3>Azbeen Fathima S.A</h3>
+                    <p class="student-info">Class XII Science, Sharjah Indian School – UAE</p>
+                    <blockquote>"The personal attention and regular assessments from Flame Learnings helped me stay on track. My doubts were always cleared with patience. The support I received was beyond what I expected!"</blockquote>
+                </div>
+        
+                <!-- Feedback 12 -->
+                <div class="feedback">
+                    <h3>Farha Fathima</h3>
+                    <p class="student-info">Class X, Indian School – Bahrain</p>
+                    <blockquote>"I joined Flame Learnings for Math and Science, and I'm so happy I did. The teachers understand our school syllabus very well. I even started enjoying Math now!"</blockquote>
+                </div>
+        
+                <!-- Feedback 13 -->
+                <div class="feedback">
+                    <h3>Mohammed Sinan</h3>
+                    <p class="student-info">Class XII Science, Birla Public School – Qatar</p>
+                    <blockquote>"Flame Learnings has been a game-changer for me. Their classes are focused and exam-oriented, which helped me a lot in revising difficult topics. I would recommend it to any student preparing seriously for board exams."</blockquote>
+                </div>
+        
+                <div class="carousel-controls">
+                    <button class="prev-btn" aria-label="Previous feedback">❮</button>
+                    <span class="counter">1/13</span>
+                    <button class="next-btn" aria-label="Next feedback">❯</button>
+                </div>
+            </div>
+        </section>
+      <!-- Load scripts at the BOTTOM of body -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
+    <!-- Call to action -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-container">
+                <div class="cta-text">
+                    <h3>Stay Updated with Flame Learnings</h3>
+                    <p>Follow for updates on new batches, schedules, and offers.</p>
+                </div>
+                <div class="cta-button">
+                    <a href="https://www.instagram.com/flamelearnings?igsh=MTdoMXhyazE4bWZpag==" class="btn btn-outline">Click here</a>
+                    <p>See what we're up to</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>Let's keep in touch!</h4>
+                    <p>Find us on any of these platforms, we respond 1-2 business days.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="links-column">
+                        <h5>Useful Links</h5>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="materials.html">Study Materials</a></li>
+                            <li><a href="faq.html">FAQs</a></li>
+                            <li><a href="contact.html">Contact us</a></li>
+                        </ul>
+                    </div>
+                    <div class="links-column">
+                        <h5>Other Resources</h5>
+                        <ul>
+                            <li><a href="https://www.instagram.com/flamelearnings?igsh=MTdoMXhyazE4bWZpag==">Instagram</a></li>
+                            <li><a href="https://www.facebook.com/share/16gdX8WeeJ/">Facebook</a></li>
+                            <li><a href="https://www.linkedin.com/company/flame-learnings/">LinkedIn</a></li>
+                            <li>
+                                Contact Numbers: <br>
+                                +91 80868 98888 <br>
+                                +91 70252 88288 <br>
+                                +91 85890 88388 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>Copyright © 2025 Flame Learnings</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+    <!-- Particle Background Canvas -->
+    <script src="js/particles.js"></script>
+    
+</body>
+</html>
