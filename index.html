@@ -9,9 +9,10 @@
     <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <link rel="stylesheet" href="css/styles.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 </head>
-<body>
+<body class="index-page">
     <!-- Navigation -->
     <header class="main-header">
         <div class="container">
@@ -30,6 +31,15 @@
                 <ul class="nav-links" id="navbarMenu">
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Courses <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="onlinetution.html">Online Tuition</a></li>
+                            <li><a href="neetjee.html">NEET/JEE Coaching</a></li>
+                            <li><a href="onlineschool.html">Online School</a></li>
+                            <li><a href="montessori.html">Montessori</a></li>
+                        </ul>
+                    </li>
                     <li><a href="materials.html">Materials</a></li>
                     <li><a href="faq.html">FAQs</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -54,7 +64,7 @@
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="assets/model.jpg" alt="Flame Learnings Banner" />
+                    <img src="assets/building2.webp" alt="Flame Learnings Banner" />
                 </div>
             </div>
         </div>
@@ -101,109 +111,64 @@
         </div>
     </section>
      
-          <!-- TESTIMONIALS -->
-          <section class="student-feedback-carousel">
-            <div class="carousel-container">
-                <!-- Feedback 1 -->
-                <div class="feedback active">
-                    <h3>Hana NS</h3>
-                    <p class="student-info">Class X, Int'l Indian School – Taif</p>
-                    <blockquote>"Flame Learnings helped me improve my understanding in Math and Science. The teachers explain every concept so clearly and patiently. The one-to-one attention really made a difference in my scores!"</blockquote>
+    <section class="testimonials">
+        <script src="js/script.js"></script>
+    
+        <div class="container">
+            <br><br><h1 align="center">Voices of Our Learners</h1>
+          <div class="row">
+            <div class="col-sm-12">
+              <div id="customers-testimonials" class="owl-carousel">
+                <!--TESTIMONIAL 1 -->
+                <div class="item">
+                  <div class="shadow-effect">
+                    <img class="img-circle" src="assets/imgg1.jpeg" alt="">
+                    <p>I’ve been attending classes at Flame Learnings for the past few months, and I can already see the difference! The one-on-one sessions are tailored to my learning pace, and the resources provided are top-notch. I feel more prepared for my exams than ever before, thanks to the consistent support from my tutors!</p>
+                  </div>
+                  <div class="testimonial-name">Hana NS <span class="text-primary mx-1">/</span> Class X, Int'l Indian School - Taif, KSA</div>
                 </div>
-        
-                <!-- Feedback 2 -->
-                <div class="feedback">
-                    <h3>Wesam Saud Abdullah</h3>
-                    <p class="student-info">Class V, Novel Int'l School – Jeddah</p>
-                    <blockquote>"I love learning with Flame Learnings! The classes are fun, and my teacher helps me a lot with reading and spelling. I got better at doing my homework too!"</blockquote>
+                <!--END OF TESTIMONIAL 1 -->
+                <!--TESTIMONIAL 2 -->
+                <div class="item">
+                  <div class="shadow-effect">
+                    <img class="img-circle" src="assets/imgg2.jpeg" alt="">
+                    <p>I’ve been attending classes at Flame Learnings for the past few months, and I can already see the difference! The one-on-one sessions are tailored to my learning pace, and the resources provided are top-notch. I feel more prepared for my exams than ever before, thanks to the consistent support from my tutors!</p>
+                  </div>
+                  <div class="testimonial-name">Mohammed Sinan <span class="text-primary mx-1">/</span> Class XII Science, Birla Public School, Qatar</div>
                 </div>
-        
-                <!-- Feedback 3 -->
-                <div class="feedback">
-                    <h3>Mohammed Yusuf</h3>
-                    <p class="student-info">Class XI Science, DPS Al Falah Int'l School – Jeddah</p>
-                    <blockquote>"Joining Flame Learnings was the best decision before my board exams. Their notes and worksheets are super helpful, and the online classes feel just like real school. I feel more confident now in Physics and Chemistry."</blockquote>
+                <!--END OF TESTIMONIAL 2 -->
+                <!--TESTIMONIAL 3 -->
+                <div class="item">
+                  <div class="shadow-effect">
+                    <img class="img-circle" src="assets/imgg3.jpeg" alt="">
+                    <p>Flame Learnings has been a game-changer for me! The personalized attention and interactive lessons made complex topics much easier to understand. The instructors are incredibly knowledgeable, and their teaching style keeps me engaged throughout. I’ve seen a significant improvement in my grades and confidence!</p>
+                  </div>
+                  <div class="testimonial-name">Mohammed Yusuf <span class="text-primary mx-1">/</span> Class XI Science, DPS Al Falah Int'l School - Jeddah, KSA</div>
                 </div>
-        
-                <!-- Feedback 4 -->
-                <div class="feedback">
-                    <h3>Mohammed Anas</h3>
-                    <p class="student-info">Class IV, Int'l Indian School – Jeddah</p>
-                    <blockquote>"Flame Learnings is very good. I like the stories and games during the English class. My teacher is very kind and helps me every time I ask."</blockquote>
+                <!--END OF TESTIMONIAL 3 -->
+                <!--TESTIMONIAL 4 -->
+                <div class="item">
+                  <div class="shadow-effect">
+                    <img class="img-circle" src="assets/imgg4.jpeg" alt="">
+                    <p>Before joining Flame Learnings, I used to struggle with understanding basic concepts. But now, learning feels so simple and fun! The teachers explain everything clearly and are always ready to help. I’ve started enjoying my studies again!</p>
+                  </div>
+                  <div class="testimonial-name">Ali Soudugar<span class="text-primary mx-1">/</span> Class XII Science, KLE'S Int'l School, Belagavi, Karnataka</div>
                 </div>
-        
-                <!-- Feedback 5 -->
-                <div class="feedback">
-                    <h3>Rayan Ahmed Rizwan</h3>
-                    <p class="student-info">Class XII Science, Al Mawarid Int'l School – Jeddah</p>
-                    <blockquote>"Flame Learnings gave me the push I needed for my NEET preparation. Their flexible class timings helped me manage school and tuition easily. Thank you for the support and motivation!"</blockquote>
+                <!--END OF TESTIMONIAL 4 -->
+                <!--TESTIMONIAL 5 -->
+                <div class="item">
+                  <div class="shadow-effect">
+                    <img class="img-circle" src="assets/imgg5.jpeg" alt="">
+                    <p>Flame Learnings has helped me build a strong foundation in math and science. The classes are interactive, and I never hesitate to ask questions because the teachers are so supportive. I feel much more confident during school tests now!</p>
+                  </div>
+                  <div class="testimonial-name">Azbeen Fathima S.A<span class="text-primary mx-1">/</span> XII Science, Sharjah Indian School, UAE</div>
                 </div>
-        
-                <!-- Feedback 6 -->
-                <div class="feedback">
-                    <h3>Ashil Razak</h3>
-                    <p class="student-info">Class XII Science, Sacred Heart English School – Kottakkal, Kerala</p>
-                    <blockquote>"Even from Kerala, I was able to attend expert classes online through Flame Learnings. The teachers are highly experienced, and their approach made learning complicated topics feel simple. I highly recommend it to science stream students."</blockquote>
-                </div>
-        
-                <!-- Feedback 7 -->
-                <div class="feedback">
-                    <h3>Rena Fathima</h3>
-                    <p class="student-info">Class X, Int'l Indian School – Taif, KSA</p>
-                    <blockquote>"Before joining Flame Learnings, I struggled with time management. Now, the organized classes and clear explanations have really helped me focus and score better. My parents are also happy with my progress."</blockquote>
-                </div>
-        
-                <!-- Feedback 8 -->
-                <div class="feedback">
-                    <h3>Ali Soudugar</h3>
-                    <p class="student-info">KLE'S International School, Belagavi, Karnataka</p>
-                    <blockquote>"Flame Learnings made online learning effective and stress-free. The sessions are interactive, and I love the quick revisions before exams. The study materials are amazing!"</blockquote>
-                </div>
-        
-                <!-- Feedback 9 -->
-                <div class="feedback">
-                    <h3>Milan Manoj Varghese</h3>
-                    <p class="student-info">Class XII Science, Al Alia Int'l School – Jeddah</p>
-                    <blockquote>"Thanks to Flame Learnings, I improved a lot in Biology and Chemistry. Their test series and feedback after each class helped me track my progress. I'm now aiming for top results!"</blockquote>
-                </div>
-        
-                <!-- Feedback 10 -->
-                <div class="feedback">
-                    <h3>Al Thouseef Abdullah</h3>
-                    <p class="student-info">Class X, Int'l Indian School – Jeddah</p>
-                    <blockquote>"What I like most about Flame Learnings is how they make tough chapters easy with real-life examples. The live classes are engaging, and I never feel bored or left out."</blockquote>
-                </div>
-        
-                <!-- Feedback 11 -->
-                <div class="feedback">
-                    <h3>Azbeen Fathima S.A</h3>
-                    <p class="student-info">Class XII Science, Sharjah Indian School – UAE</p>
-                    <blockquote>"The personal attention and regular assessments from Flame Learnings helped me stay on track. My doubts were always cleared with patience. The support I received was beyond what I expected!"</blockquote>
-                </div>
-        
-                <!-- Feedback 12 -->
-                <div class="feedback">
-                    <h3>Farha Fathima</h3>
-                    <p class="student-info">Class X, Indian School – Bahrain</p>
-                    <blockquote>"I joined Flame Learnings for Math and Science, and I'm so happy I did. The teachers understand our school syllabus very well. I even started enjoying Math now!"</blockquote>
-                </div>
-        
-                <!-- Feedback 13 -->
-                <div class="feedback">
-                    <h3>Mohammed Sinan</h3>
-                    <p class="student-info">Class XII Science, Birla Public School – Qatar</p>
-                    <blockquote>"Flame Learnings has been a game-changer for me. Their classes are focused and exam-oriented, which helped me a lot in revising difficult topics. I would recommend it to any student preparing seriously for board exams."</blockquote>
-                </div>
-        
-                <div class="carousel-controls">
-                    <button class="prev-btn" aria-label="Previous feedback">❮</button>
-                    <span class="counter">1/13</span>
-                    <button class="next-btn" aria-label="Next feedback">❯</button>
-                </div>
+                <!--END OF TESTIMONIAL 5 -->
+              </div>
             </div>
+          </div>
+          </div>
         </section>
-      <!-- Load scripts at the BOTTOM of body -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 
     <!-- Call to action -->
@@ -261,10 +226,10 @@
             </div>
         </div>
     </footer>
-    <!-- Custom JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/script.js"></script>
-    <!-- Particle Background Canvas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="js/particles.js"></script>
-    
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -2,7 +2,16 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu toggle
     const menuToggle = document.getElementById('navbarToggler');
     const navLinks = document.getElementById('navbarMenu');
-    
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    dropdownToggles.forEach(toggle => {
+    toggle.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            const dropdown = this.parentElement;
+            dropdown.classList.toggle('active');
+        }
+    });
+});
     if (menuToggle && navLinks) {
         menuToggle.addEventListener('click', function() {
             this.classList.toggle('active');
@@ -13,13 +22,48 @@ document.addEventListener('DOMContentLoaded', function() {
         // Close menu when clicking on a link
         navLinks.addEventListener('click', function(e) {
             if (window.innerWidth <= 768 && e.target.tagName === 'A') {
-                menuToggle.classList.remove('active');
-                navLinks.classList.remove('active');
-                document.body.classList.remove('menu-open');
+                // Close all dropdowns
+                document.querySelectorAll('.dropdown').forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+                
+                // Close mobile menu if clicking on non-dropdown link
+                if (!e.target.closest('.dropdown')) {
+                    menuToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    document.body.classList.remove('menu-open');
+                }
             }
         });
     }
-    
+    dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                const dropdown = this.closest('.dropdown');
+                const isActive = dropdown.classList.contains('active');
+                
+                // Close all dropdowns first
+                document.querySelectorAll('.dropdown').forEach(d => {
+                    d.classList.remove('active');
+                });
+                
+                // Open current one if it wasn't active
+                if (!isActive) {
+                    dropdown.classList.add('active');
+                    
+                    // Scroll dropdown into view if needed
+                    setTimeout(() => {
+                        const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+                        dropdownMenu.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'nearest'
+                        });
+                    }, 50);
+                }
+            }
+        });
+    });
     
     // Sticky header
     const header = document.querySelector('.main-header');
@@ -33,99 +77,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // Carousel
-document.addEventListener('DOMContentLoaded', function() {
-    const feedbacks = document.querySelectorAll('.feedback');
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
-    const counter = document.querySelector('.counter');
-    const container = document.querySelector('.carousel-container');
-    
-    // Custom durations for each testimonial in milliseconds
-    const testimonialDurations = [
-        8000, // Hana NS (8s)
-        5000, // Wesam Saud (5s - shorter)
-        8000, // Mohammed Yusuf (8s)
-        5000, // Mohammed Anas (5s - shorter)
-        7000, // Rayan Ahmed (7s)
-        6000, // Ashil Razak (6s)
-        5000, // Rena Fathima (5s - shorter)
-        8000, // Ali Soudugar (8s)
-        6000, // Milan Manoj (6s)
-        7000, // Al Thouseef (7s)
-        6000, // Azbeen Fathima (6s)
-        5000, // Farha Fathima (5s - shorter)
-        8000  // Mohammed Sinan (8s)
-    ];
-    
-    let currentIndex = 0;
-    let autoPlayTimeout;
-    let isPaused = false;
-
-    function showFeedback(index) {
-        // Update display
-        feedbacks.forEach(feedback => feedback.classList.remove('active'));
-        feedbacks[index].classList.add('active');
-        counter.textContent = `${index + 1}/${feedbacks.length}`;
-        
-        // Clear any existing timeout
-        clearTimeout(autoPlayTimeout);
-        
-        // Only auto-advance if not paused
-        if (!isPaused) {
-            autoPlayTimeout = setTimeout(() => {
-                nextFeedback();
-            }, testimonialDurations[index]);
+jQuery(document).ready(function($) {
+    "use strict";
+    //  TESTIMONIALS CAROUSEL HOOK
+    $('#customers-testimonials').owlCarousel({
+        loop: true,
+        center: true,
+        items: 3,
+        margin: 0,
+        autoplay: true,
+        dots:true,
+        autoplayTimeout: 8500,
+        smartSpeed: 450,
+        responsive: {
+          0: {
+            items: 1
+          },
+          768: {
+            items: 2
+          },
+          1170: {
+            items: 3
+          }
         }
-    }
-
-    function nextFeedback() {
-        currentIndex = (currentIndex + 1) % feedbacks.length;
-        showFeedback(currentIndex);
-    }
-
-    function prevFeedback() {
-        currentIndex = (currentIndex - 1 + feedbacks.length) % feedbacks.length;
-        showFeedback(currentIndex);
-    }
-
-    // Initialize
-    showFeedback(currentIndex);
-
-    // Event listeners
-    prevBtn.addEventListener('click', function() {
-        prevFeedback();
-    });
-    
-    nextBtn.addEventListener('click', function() {
-        nextFeedback();
-    });
-
-    // Pause on hover
-    container.addEventListener('mouseenter', function() {
-        isPaused = true;
-        clearTimeout(autoPlayTimeout);
-    });
-    
-    container.addEventListener('mouseleave', function() {
-        isPaused = false;
-        showFeedback(currentIndex); // Restarts the timer
-    });
-
-    // Keyboard navigation
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'ArrowLeft') prevFeedback();
-        if (e.key === 'ArrowRight') nextFeedback();
     });
 });
 
-
-
-// maps
-function initMap() {
-    const location = { lat: YOUR_LATITUDE, lng: YOUR_LONGITUDE }; // Replace with your coordinates
-    const map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 15,
-      center: location,
-    });
-    new google.maps.Marker({ position: location, map: map });
-  }
